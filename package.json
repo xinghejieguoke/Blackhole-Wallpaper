@@ -1,0 +1,40 @@
+{
+  "name": "blackhole-wallpaper",
+  "version": "0.1.0",
+  "description": "桌面黑洞 动态壁纸（Electron 示例，含 Windows 桌面嵌入示例）",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "optionalDependencies": {
+    "ffi-napi": "^4.0.3",
+    "ref-napi": "^3.0.4"
+  },
+  "build": {
+    "productName": "BlackHoleWallpaper",
+    "appId": "com.example.blackholewallpaper",
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
